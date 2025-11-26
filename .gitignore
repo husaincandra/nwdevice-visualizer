@@ -1,0 +1,22 @@
+# Binaries
+nwdevice-viz
+
+# Database
+switches.db
+
+# Certificates
+*.crt
+*.key
+
+# Environment Variables
+.env
+
+# Node
+web/node_modules
+web/dist
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/

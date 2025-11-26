@@ -1,0 +1,22 @@
+services:
+  nwdevice-visualizer:
+    image: nullpo7z/nwdevice-visualizer:latest
+    container_name: nwdevice-visualizer
+    ports:
+      - "8443:8080"
+    environment:
+      - DB_PATH=/app/data/switches.db
+      - CERT_FILE=/app/certs/server.crt
+      - KEY_FILE=/app/certs/server.key
+      - JWT_SECRET=CHANGE_THIS_TO_A_SECURE_SECRET
+      - PORT=8080
+    volumes:
+      - nwdevice_data:/app/data
+      - nwdevice_certs:/app/certs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  nwdevice_data:
+  nwdevice_certs:
